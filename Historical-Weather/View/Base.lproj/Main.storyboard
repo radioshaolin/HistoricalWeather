@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Aileron-SemiBold.otf">
+            <string>Aileron-SemiBold</string>
+        </array>
+        <array key="HKGrotesk-Bold.otf">
+            <string>HKGrotesk-Bold</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Meteo View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MeteoViewController" customModule="Perpetio_Test_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="tTb-u5-YVE" userLabel="bg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0a-UE-ytq" userLabel="GradientView" customClass="GradientView" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view opaque="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYL-5f-GS8" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="C7J-0b-5li"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="753" text="Historical Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLk-YT-Sj4" userLabel="HeaderBigLabel" customClass="HeaderLabel" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                <rect key="frame" x="30.5" y="35" width="261" height="37.5"/>
+                                <fontDescription key="fontDescription" name="HKGrotesk-Bold" family="HK Grotesk" pointSize="32"/>
+                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetLayer">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="748" text="Bradford Meteorological Station" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGc-s4-C7E" userLabel="HeaderSmallLabel" customClass="HeaderLabel" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                <rect key="frame" x="60" y="76" width="200" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Aileron-SemiBold" family="Aileron" pointSize="14"/>
+                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffsetLayer">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="b6H-Wu-u5r">
+                                <rect key="frame" x="20" y="115" width="280" height="282"/>
+                                <subviews>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5T-ap-kLb" userLabel="MaxTempView" propertyAccessControl="none">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                        <subviews>
+                                            <view opaque="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5e6-wr-AKv" userLabel="MaxTempPlashka" customClass="UIVIewCusomizer" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13.2 °C" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk4-xU-Hen" userLabel="MaxTmpNumLabel">
+                                                <rect key="frame" x="171" y="7" width="87" height="36"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                                <color key="textColor" red="0.86055278778076172" green="0.23791119456291199" blue="0.24043229222297668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mean Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fo-h9-PyD" userLabel="MaxTmpSmallTxt">
+                                                <rect key="frame" x="22" y="7" width="100.5" height="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" text="Maximum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7B-i0-sIs" userLabel="MaxTmpBigTxt">
+                                                <rect key="frame" x="22" y="20" width="89" height="23"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="7fo-h9-PyD" firstAttribute="leading" secondItem="J5T-ap-kLb" secondAttribute="leading" constant="22" id="18I-UV-xKR"/>
+                                            <constraint firstItem="Bk4-xU-Hen" firstAttribute="top" secondItem="J5T-ap-kLb" secondAttribute="top" constant="7" id="Hvm-dz-Cgu"/>
+                                            <constraint firstAttribute="height" constant="50" id="I7h-vk-cnd"/>
+                                            <constraint firstAttribute="bottom" secondItem="5e6-wr-AKv" secondAttribute="bottom" id="JDa-Te-PaC"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bk4-xU-Hen" secondAttribute="trailing" priority="750" constant="22" id="Tot-20-wbX"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7fo-h9-PyD" secondAttribute="trailing" constant="20" symbolic="YES" id="Zbn-nD-Szn"/>
+                                            <constraint firstAttribute="trailing" secondItem="5e6-wr-AKv" secondAttribute="trailing" id="dkC-RS-tjT"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J7B-i0-sIs" secondAttribute="trailing" priority="750" constant="20" symbolic="YES" id="eGH-VR-bZp"/>
+                                            <constraint firstItem="5e6-wr-AKv" firstAttribute="top" secondItem="J5T-ap-kLb" secondAttribute="top" id="ecL-ZI-Tfq"/>
+                                            <constraint firstItem="J7B-i0-sIs" firstAttribute="leading" secondItem="J5T-ap-kLb" secondAttribute="leading" constant="22" id="hM9-bJ-AR2"/>
+                                            <constraint firstItem="Bk4-xU-Hen" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J5T-ap-kLb" secondAttribute="leading" constant="20" symbolic="YES" id="kK5-h3-Ir5"/>
+                                            <constraint firstAttribute="bottom" secondItem="J7B-i0-sIs" secondAttribute="bottom" constant="7" id="tdi-BA-eF0"/>
+                                            <constraint firstItem="7fo-h9-PyD" firstAttribute="top" secondItem="J5T-ap-kLb" secondAttribute="top" constant="7" id="twp-hL-2qC"/>
+                                            <constraint firstItem="5e6-wr-AKv" firstAttribute="leading" secondItem="J5T-ap-kLb" secondAttribute="leading" id="wsh-wc-LmN"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bk4-xU-Hen" secondAttribute="bottom" constant="7" id="yth-mv-Dpt"/>
+                                        </constraints>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eix-0z-zxV" userLabel="MinTempView">
+                                        <rect key="frame" x="0.0" y="58" width="280" height="50"/>
+                                        <subviews>
+                                            <view opaque="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMJ-yO-W01" userLabel="MinTempPlashka" customClass="UIVIewCusomizer" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.7 °C" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7c-5j-4wg" userLabel="MinTmpNumLabel">
+                                                <rect key="frame" x="185.5" y="7" width="72.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                                <color key="textColor" red="0.14537334439999999" green="0.47939169409999999" blue="0.76690435410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mean Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id6-zO-cWV" userLabel="MinTmpSmallTxt">
+                                                <rect key="frame" x="22" y="7" width="100.5" height="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s9-eB-rR6" userLabel="MinTmpBigTxt">
+                                                <rect key="frame" x="22" y="20" width="84" height="23"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="N7c-5j-4wg" secondAttribute="trailing" constant="22" id="6eK-6U-Pa1"/>
+                                            <constraint firstItem="N7c-5j-4wg" firstAttribute="top" secondItem="Eix-0z-zxV" secondAttribute="top" constant="7" id="SgG-aQ-u2y"/>
+                                            <constraint firstAttribute="height" constant="50" id="UIu-gY-Wze"/>
+                                            <constraint firstItem="Id6-zO-cWV" firstAttribute="top" secondItem="Eix-0z-zxV" secondAttribute="top" constant="7" id="Uzy-sH-kMc"/>
+                                            <constraint firstItem="N7c-5j-4wg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Eix-0z-zxV" secondAttribute="leading" constant="20" symbolic="YES" id="X7g-TY-f3o"/>
+                                            <constraint firstItem="1s9-eB-rR6" firstAttribute="leading" secondItem="Eix-0z-zxV" secondAttribute="leading" constant="22" id="XhR-Ff-NIP"/>
+                                            <constraint firstAttribute="bottom" secondItem="N7c-5j-4wg" secondAttribute="bottom" constant="7" id="Xt3-9R-WNk"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Id6-zO-cWV" secondAttribute="trailing" constant="20" symbolic="YES" id="bms-vn-Bq7"/>
+                                            <constraint firstAttribute="bottom" secondItem="gMJ-yO-W01" secondAttribute="bottom" id="ec6-TI-0cF"/>
+                                            <constraint firstItem="gMJ-yO-W01" firstAttribute="top" secondItem="Eix-0z-zxV" secondAttribute="top" id="iZH-J7-l6k"/>
+                                            <constraint firstItem="Id6-zO-cWV" firstAttribute="leading" secondItem="Eix-0z-zxV" secondAttribute="leading" constant="22" id="oug-BP-RsK"/>
+                                            <constraint firstAttribute="bottom" secondItem="1s9-eB-rR6" secondAttribute="bottom" constant="7" id="rI2-uo-h4U"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1s9-eB-rR6" secondAttribute="trailing" priority="750" constant="20" symbolic="YES" id="rsf-4l-KCg"/>
+                                            <constraint firstAttribute="trailing" secondItem="gMJ-yO-W01" secondAttribute="trailing" id="uR2-hP-dfx"/>
+                                            <constraint firstItem="gMJ-yO-W01" firstAttribute="leading" secondItem="Eix-0z-zxV" secondAttribute="leading" id="zfP-Wa-VDb"/>
+                                        </constraints>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNz-gR-84H" userLabel="AirfrostView">
+                                        <rect key="frame" x="0.0" y="116" width="280" height="50"/>
+                                        <subviews>
+                                            <view opaque="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7te-yF-m0N" userLabel="AirfrostPlashka" customClass="UIVIewCusomizer" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 days" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T38-zH-Dkm" userLabel="AirfrostNumLabel">
+                                                <rect key="frame" x="183" y="7" width="75" height="36"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                                <color key="textColor" red="0.44583237170000001" green="0.3460960984" blue="0.67233473060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJW-qK-Ny8" userLabel="AirfrostSmallTxt">
+                                                <rect key="frame" x="22" y="7" width="41" height="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airfrost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga0-6d-8Bk" userLabel="AirfrostBigTxt">
+                                                <rect key="frame" x="22" y="20" width="67.5" height="23"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="T38-zH-Dkm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QNz-gR-84H" secondAttribute="leading" constant="20" symbolic="YES" id="2On-6W-Iys"/>
+                                            <constraint firstAttribute="bottom" secondItem="ga0-6d-8Bk" secondAttribute="bottom" constant="7" id="4Oj-f4-ira"/>
+                                            <constraint firstAttribute="bottom" secondItem="T38-zH-Dkm" secondAttribute="bottom" constant="7" id="7z6-25-fOJ"/>
+                                            <constraint firstItem="T38-zH-Dkm" firstAttribute="top" secondItem="QNz-gR-84H" secondAttribute="top" constant="7" id="E5w-Gx-OnI"/>
+                                            <constraint firstItem="ga0-6d-8Bk" firstAttribute="leading" secondItem="QNz-gR-84H" secondAttribute="leading" constant="22" id="HR7-Md-csG"/>
+                                            <constraint firstAttribute="height" constant="50" id="NKl-mJ-mPs"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ga0-6d-8Bk" secondAttribute="trailing" constant="20" symbolic="YES" id="R2O-fR-eTO"/>
+                                            <constraint firstItem="aJW-qK-Ny8" firstAttribute="leading" secondItem="QNz-gR-84H" secondAttribute="leading" constant="22" id="VZ4-FL-sUr"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aJW-qK-Ny8" secondAttribute="trailing" constant="20" symbolic="YES" id="aJH-gA-idu"/>
+                                            <constraint firstAttribute="trailing" secondItem="T38-zH-Dkm" secondAttribute="trailing" constant="22" id="bEv-jb-0KD"/>
+                                            <constraint firstItem="7te-yF-m0N" firstAttribute="leading" secondItem="QNz-gR-84H" secondAttribute="leading" id="fEx-cI-1LK"/>
+                                            <constraint firstItem="7te-yF-m0N" firstAttribute="top" secondItem="QNz-gR-84H" secondAttribute="top" id="q2f-Fa-nnj"/>
+                                            <constraint firstItem="aJW-qK-Ny8" firstAttribute="top" secondItem="QNz-gR-84H" secondAttribute="top" constant="7" id="qS7-7O-ydJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="7te-yF-m0N" secondAttribute="bottom" id="up9-R3-c2f"/>
+                                            <constraint firstAttribute="trailing" secondItem="7te-yF-m0N" secondAttribute="trailing" id="xcy-uP-kHO"/>
+                                        </constraints>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWH-0V-qUN" userLabel="RainfallView">
+                                        <rect key="frame" x="0.0" y="174" width="280" height="50"/>
+                                        <subviews>
+                                            <view opaque="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9v-lv-pku" userLabel="RainfallPlashka" customClass="UIVIewCusomizer" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="67.8 mm" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptN-0U-gaS" userLabel="RainfallNumLabel">
+                                                <rect key="frame" x="156.5" y="7" width="101.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                                <color key="textColor" red="0.34563785790000001" green="0.71637493370000005" blue="0.26093706490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-UL-Id0" userLabel="RainfallSmallTxt">
+                                                <rect key="frame" x="22" y="7" width="25.5" height="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Rainfall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCN-2c-Kqi" userLabel="RainfallBigTxt">
+                                                <rect key="frame" x="22" y="20" width="68" height="23"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="D9v-lv-pku" secondAttribute="bottom" id="0Mm-6j-egB"/>
+                                            <constraint firstAttribute="bottom" secondItem="DCN-2c-Kqi" secondAttribute="bottom" constant="7" id="Dwl-Xo-Ii1"/>
+                                            <constraint firstAttribute="trailing" secondItem="D9v-lv-pku" secondAttribute="trailing" id="FcK-IC-6Pg"/>
+                                            <constraint firstItem="D9v-lv-pku" firstAttribute="leading" secondItem="YWH-0V-qUN" secondAttribute="leading" id="Qoo-j8-Mw9"/>
+                                            <constraint firstItem="4uy-UL-Id0" firstAttribute="leading" secondItem="YWH-0V-qUN" secondAttribute="leading" constant="22" id="XJ5-EC-fzI"/>
+                                            <constraint firstItem="D9v-lv-pku" firstAttribute="top" secondItem="YWH-0V-qUN" secondAttribute="top" id="dtC-J8-mEM"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4uy-UL-Id0" secondAttribute="trailing" constant="20" symbolic="YES" id="ecS-II-aa6"/>
+                                            <constraint firstAttribute="bottom" secondItem="ptN-0U-gaS" secondAttribute="bottom" constant="7" id="f1m-MK-FyV"/>
+                                            <constraint firstAttribute="trailing" secondItem="ptN-0U-gaS" secondAttribute="trailing" constant="22" id="fgh-Qy-B5r"/>
+                                            <constraint firstItem="ptN-0U-gaS" firstAttribute="top" secondItem="YWH-0V-qUN" secondAttribute="top" constant="7" id="iUp-Sl-wbW"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DCN-2c-Kqi" secondAttribute="trailing" constant="20" symbolic="YES" id="laO-me-9I0"/>
+                                            <constraint firstItem="4uy-UL-Id0" firstAttribute="top" secondItem="YWH-0V-qUN" secondAttribute="top" constant="7" id="lfu-zR-z8g"/>
+                                            <constraint firstItem="ptN-0U-gaS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YWH-0V-qUN" secondAttribute="leading" constant="20" symbolic="YES" id="niM-AK-Rsh"/>
+                                            <constraint firstItem="DCN-2c-Kqi" firstAttribute="leading" secondItem="YWH-0V-qUN" secondAttribute="leading" constant="22" id="otw-dc-rQp"/>
+                                            <constraint firstAttribute="height" constant="50" id="tEb-pU-LV4"/>
+                                        </constraints>
+                                    </view>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78x-tC-tCX" userLabel="SunshineView">
+                                        <rect key="frame" x="0.0" y="232" width="280" height="50"/>
+                                        <subviews>
+                                            <view opaque="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGJ-qU-kBG" userLabel="SunshinePlashka" customClass="UIVIewCusomizer" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28.0 hrs" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zow-r3-PYx" userLabel="SunshineNumLabel">
+                                                <rect key="frame" x="165.5" y="7" width="92.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                                <color key="textColor" red="0.77275866270000004" green="0.68634635209999995" blue="0.35127052660000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total duration of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yF2-f0-zBA" userLabel="SunshineSmallTxt">
+                                                <rect key="frame" x="22" y="7" width="87" height="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunshine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaP-QG-u8d" userLabel="SunshineBigTxt">
+                                                <rect key="frame" x="22" y="20" width="83.5" height="23"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                                <color key="textColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yF2-f0-zBA" secondAttribute="trailing" constant="20" symbolic="YES" id="5a1-iO-hEz"/>
+                                            <constraint firstItem="zow-r3-PYx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="78x-tC-tCX" secondAttribute="leading" constant="20" symbolic="YES" id="KUL-ih-yWt"/>
+                                            <constraint firstAttribute="bottom" secondItem="zow-r3-PYx" secondAttribute="bottom" constant="7" id="S7l-xp-cAy"/>
+                                            <constraint firstAttribute="bottom" secondItem="nGJ-qU-kBG" secondAttribute="bottom" id="WU7-a8-Kw2"/>
+                                            <constraint firstItem="oaP-QG-u8d" firstAttribute="leading" secondItem="78x-tC-tCX" secondAttribute="leading" constant="22" id="XW5-Fh-dNM"/>
+                                            <constraint firstItem="yF2-f0-zBA" firstAttribute="top" secondItem="78x-tC-tCX" secondAttribute="top" constant="7" id="Xc5-Ul-Pxg"/>
+                                            <constraint firstItem="nGJ-qU-kBG" firstAttribute="leading" secondItem="78x-tC-tCX" secondAttribute="leading" id="b5x-S5-Ddj"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oaP-QG-u8d" secondAttribute="trailing" constant="20" symbolic="YES" id="bfX-bl-Nya"/>
+                                            <constraint firstAttribute="height" constant="50" id="d8B-XM-XXv"/>
+                                            <constraint firstItem="yF2-f0-zBA" firstAttribute="leading" secondItem="78x-tC-tCX" secondAttribute="leading" constant="22" id="fRN-cp-Oys"/>
+                                            <constraint firstAttribute="trailing" secondItem="zow-r3-PYx" secondAttribute="trailing" constant="22" id="fU6-hS-h2i"/>
+                                            <constraint firstItem="zow-r3-PYx" firstAttribute="top" secondItem="78x-tC-tCX" secondAttribute="top" constant="7" id="iEP-0E-kEZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="nGJ-qU-kBG" secondAttribute="trailing" id="iQZ-ai-OLg"/>
+                                            <constraint firstItem="nGJ-qU-kBG" firstAttribute="top" secondItem="78x-tC-tCX" secondAttribute="top" id="siM-NW-qFJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="oaP-QG-u8d" secondAttribute="bottom" constant="7" id="zl7-S8-aA3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="282" id="GG0-u8-3H2"/>
+                                </constraints>
+                            </stackView>
+                            <view opaque="NO" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkH-jg-gdw" userLabel="PickerPlashka" customClass="UIVIewCusomizer" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="466.5" width="320" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Jc7-v2-4pX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Zlh-nO-8FM" userLabel="PickerView">
+                                <rect key="frame" x="0.0" y="417" width="320" height="151"/>
+                                <subviews>
+                                    <pickerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zj-ZJ-fkn" userLabel="Month Picker" customClass="MonthsModelPicker" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="160" height="143"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="skL-mR-tau"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <pickerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvb-Sh-f12" userLabel="Year Picker" customClass="YearModelPicker" customModule="Perpetio_Test_Task" customModuleProvider="target">
+                                        <rect key="frame" x="152" y="0.0" width="160" height="143"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="6Iw-7Y-WzF"/>
+                                        </constraints>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lvb-Sh-f12" secondAttribute="bottom" constant="8" id="11i-EA-uhY"/>
+                                    <constraint firstAttribute="bottom" secondItem="1zj-ZJ-fkn" secondAttribute="bottom" constant="8" id="H3g-P5-nwW"/>
+                                    <constraint firstAttribute="trailing" secondItem="lvb-Sh-f12" secondAttribute="trailing" constant="8" id="SvB-Ld-sTv"/>
+                                    <constraint firstItem="1zj-ZJ-fkn" firstAttribute="top" secondItem="Zlh-nO-8FM" secondAttribute="top" id="kZP-Jz-dJb"/>
+                                    <constraint firstItem="1zj-ZJ-fkn" firstAttribute="leading" secondItem="Zlh-nO-8FM" secondAttribute="leading" constant="8" id="m7C-M7-CIB"/>
+                                    <constraint firstItem="lvb-Sh-f12" firstAttribute="top" secondItem="Zlh-nO-8FM" secondAttribute="top" id="oxq-CW-6WM"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="wCF-2d-DxW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.79992932080000001" green="0.80004525179999997" blue="0.79990392919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tTb-u5-YVE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0QJ-w7-qIV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="IYL-5f-GS8" secondAttribute="leading" id="1ay-IE-XLf"/>
+                            <constraint firstItem="wLk-YT-Sj4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="2VC-H6-TvQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b6H-Wu-u5r" secondAttribute="trailing" constant="20" id="3Lp-qr-421"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d0a-UE-ytq" secondAttribute="trailing" id="4ZV-f6-fNI"/>
+                            <constraint firstItem="d0a-UE-ytq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="54x-mm-Fwe"/>
+                            <constraint firstItem="b6H-Wu-u5r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="7Do-zX-l6V"/>
+                            <constraint firstItem="Zlh-nO-8FM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7kB-HP-XZz"/>
+                            <constraint firstItem="GGc-s4-C7E" firstAttribute="firstBaseline" secondItem="wLk-YT-Sj4" secondAttribute="firstBaseline" constant="24" symbolType="layoutAnchor" id="AGx-jZ-8uU"/>
+                            <constraint firstItem="tTb-u5-YVE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Atr-KS-Y8F"/>
+                            <constraint firstAttribute="top" secondItem="tTb-u5-YVE" secondAttribute="top" id="JPo-zj-LSk"/>
+                            <constraint firstItem="hkH-jg-gdw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NzF-3r-QCa"/>
+                            <constraint firstItem="Zlh-nO-8FM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="b6H-Wu-u5r" secondAttribute="bottom" constant="20" id="Odw-P3-8MO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hkH-jg-gdw" secondAttribute="trailing" id="P5z-oO-cjt"/>
+                            <constraint firstItem="Zlh-nO-8FM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QBF-pC-yfr"/>
+                            <constraint firstItem="d0a-UE-ytq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a6j-cN-14E"/>
+                            <constraint firstItem="GGc-s4-C7E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cgk-45-PmK"/>
+                            <constraint firstItem="hkH-jg-gdw" firstAttribute="centerY" secondItem="1zj-ZJ-fkn" secondAttribute="centerY" id="e0l-r6-YFr"/>
+                            <constraint firstAttribute="top" secondItem="IYL-5f-GS8" secondAttribute="top" id="gUG-fR-mvQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tTb-u5-YVE" secondAttribute="bottom" id="h0R-Og-Txy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wLk-YT-Sj4" secondAttribute="bottom" priority="750" constant="612" id="h61-RM-iVK"/>
+                            <constraint firstItem="b6H-Wu-u5r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hcv-2l-Rc5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d0a-UE-ytq" secondAttribute="bottom" id="htx-Mw-WoC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IYL-5f-GS8" secondAttribute="trailing" id="pyU-Y9-AFB"/>
+                            <constraint firstItem="wLk-YT-Sj4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tOe-7V-aEB"/>
+                            <constraint firstItem="Zlh-nO-8FM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wYB-LJ-E1D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="airFrostLabel" destination="T38-zH-Dkm" id="kZb-gU-Zrp"/>
+                        <outlet property="backgroundImage" destination="tTb-u5-YVE" id="Yr9-VI-xET"/>
+                        <outlet property="gradientView" destination="d0a-UE-ytq" id="eVz-Cc-eVx"/>
+                        <outlet property="headerBigLabel" destination="wLk-YT-Sj4" id="KIP-zc-Hvc"/>
+                        <outlet property="headerSmallLabel" destination="GGc-s4-C7E" id="ZHd-gI-XMl"/>
+                        <outlet property="headerView" destination="IYL-5f-GS8" id="ted-k5-x8B"/>
+                        <outlet property="maxTempLabel" destination="Bk4-xU-Hen" id="teB-dJ-fiK"/>
+                        <outlet property="meteoDataView" destination="b6H-Wu-u5r" id="8PT-v8-CWb"/>
+                        <outlet property="minTempLabel" destination="N7c-5j-4wg" id="KS0-lo-X9j"/>
+                        <outlet property="monthPicker" destination="1zj-ZJ-fkn" id="rK2-Ks-LFz"/>
+                        <outlet property="pickerPlashka" destination="hkH-jg-gdw" id="pMf-lA-2Q1"/>
+                        <outlet property="pickersView" destination="Zlh-nO-8FM" id="xGK-1A-uzb"/>
+                        <outlet property="pickersViewHeightConstraint" destination="7Do-zX-l6V" id="ybm-av-Xdz"/>
+                        <outlet property="rainfallLabel" destination="ptN-0U-gaS" id="8Xa-5p-25p"/>
+                        <outlet property="rootView" destination="8bC-Xf-vdC" id="evf-yy-pls"/>
+                        <outlet property="sunshineLabel" destination="zow-r3-PYx" id="QTd-4Q-RtL"/>
+                        <outlet property="yearPicker" destination="lvb-Sh-f12" id="OHc-e3-3bp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="187" height="333"/>
+    </resources>
+</document>
